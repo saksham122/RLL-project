@@ -7,5 +7,8 @@ import com.foodbox.entity.food;
 
 @Repository
 public interface foodRepo extends JpaRepository<food, Integer>{
+  
+    @Query("SELECT f FROM food f WHERE f.status = 'ENABLE'")
+	  public List<food> findAllbystatus();
 
 }
