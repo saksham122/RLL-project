@@ -18,7 +18,8 @@ public class signupController {
 	signupRepo surepo;
 	@Autowired
 	signupService sus;
-	
+	@Autowired
+	foodRepo foodrepo;
 	@RequestMapping("/signup")
 	public Boolean create(@RequestBody signup su) {
 		surepo.save(su);
@@ -42,5 +43,9 @@ public class signupController {
 	@PutMapping("/updateuser/{id}")
 	public Boolean updateFooditem(@PathVariable int id,@RequestBody signup su) {
 		return sus.updateUser(id, su);
+	}
+	@GetMapping("/showallfood")
+	public List<food> showallfood(){
+		return foodrepo.findAllbystatus();
 	}
 }
