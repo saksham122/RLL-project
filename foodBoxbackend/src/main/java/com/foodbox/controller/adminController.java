@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.foodbox.entity.admin;
 import com.foodbox.entity.food;
 import com.foodbox.repo.adminRepo;
+import com.foodbox.repo.foodRepo;
 import com.foodbox.service.adminService;
 import com.foodbox.service.foodService;
 
@@ -30,6 +31,9 @@ public class adminController {
 	
 	@Autowired
 	foodService foodservice;
+	
+	@Autowired
+	foodRepo foodrepo;
 	
 	@RequestMapping("/adminlogin")
 	public Boolean adminlogin(@RequestBody admin a) {
@@ -75,5 +79,9 @@ public class adminController {
 	public Boolean deleteFooditem(@PathVariable int id) {
 		return foodservice.deleteFood(id);
 	}
+//	@DeleteMapping("/deletecuisene/{id}")
+//	public Boolean deleteFooditem(@PathVariable String cuisine) {
+//		 foodService.deleteCuisine(cuisine);
+//	}
 	
 }

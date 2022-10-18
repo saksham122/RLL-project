@@ -51,6 +51,9 @@ public class signupService {
 		if(su.getMobilenumber()!=0) {
 			s.setMobilenumber(su.getMobilenumber());
 		}
+		if(su.getAddress()!=null){
+			s.setAddress(su.getAddress());
+		}
 		
 		
 		sur.save(s);

@@ -5,17 +5,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
 @Entity
 public class food {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int id;
 	public String foodname;
-	public String cuisinetype;
+	public String cuisinename;
 	public float price;
 	public String offers;
 	public String description;
 	public String status;
+
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public int getId() {
 		return id;
 	}
@@ -34,11 +43,12 @@ public class food {
 	public void setFoodname(String foodname) {
 		this.foodname = foodname;
 	}
-	public String getCuisinetype() {
-		return cuisinetype;
+	
+	public String getCuisinename() {
+		return cuisinename;
 	}
-	public void setCuisinetype(String cuisinetype) {
-		this.cuisinetype = cuisinetype;
+	public void setCuisinename(String cuisinename) {
+		this.cuisinename = cuisinename;
 	}
 	public float getPrice() {
 		return price;

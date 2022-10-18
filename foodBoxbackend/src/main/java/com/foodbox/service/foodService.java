@@ -19,8 +19,8 @@ public class foodService {
 	}
 	public Boolean updateFood(int id,food f) {
 		food f1 = foodrepo.getById(id);
-		if(f.getCuisinetype()!=null) {
-			f1.setCuisinetype(f.getCuisinetype());
+		if(f.getCuisinename()!=null) {
+			f1.setCuisinename(f.getCuisinename());
 		}
 		if(f.getdescription()!=null) {
 			f1.setdescription(f.getdescription());
@@ -49,4 +49,9 @@ public class foodService {
 	public List<food> getAllfood(){
 		return foodrepo.findAll();
 	}
+	public Boolean deleteCuisine(String cuisine) {
+		return foodrepo.deletecuisinename(cuisine);
+	}
+	
+	
 }

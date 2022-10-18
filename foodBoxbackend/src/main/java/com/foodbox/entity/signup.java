@@ -14,6 +14,7 @@ public class signup {
 	public String email;
 	public String password;
 	public String name;
+	public String address;
 	public long mobilenumber;
 	public int getId() {
 		return id;
@@ -23,6 +24,12 @@ public class signup {
 	}
 	public String getName() {
 		return name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public void setName(String name) {
 		this.name = name;

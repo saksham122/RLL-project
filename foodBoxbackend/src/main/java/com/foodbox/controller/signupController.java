@@ -1,6 +1,9 @@
 package com.foodbox.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.foodbox.entity.food;
 import com.foodbox.entity.signup;
+import com.foodbox.repo.foodRepo;
 import com.foodbox.repo.signupRepo;
+import com.foodbox.service.foodService;
 import com.foodbox.service.signupService;
 
 @RestController
@@ -20,6 +25,9 @@ public class signupController {
 	signupService sus;
 	@Autowired
 	foodRepo foodrepo;
+	@Autowired 
+	foodService fs;
+	
 	@RequestMapping("/signup")
 	public Boolean create(@RequestBody signup su) {
 		surepo.save(su);
@@ -48,4 +56,5 @@ public class signupController {
 	public List<food> showallfood(){
 		return foodrepo.findAllbystatus();
 	}
+	
 }
