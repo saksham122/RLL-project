@@ -1,0 +1,121 @@
+{
+  "register": [
+    {
+      "id": 1,
+      "username": "json-server",
+      "email": "typicode",
+      "password": "server",
+      "phno": "8529637412"
+    },
+    {
+      "username": "sandhya",
+      "email": "sandhyamathi@gmail.com",
+      "password": "sandhya",
+      "phno": "8529637415",
+      "id": 2
+    },
+    {
+      "username": "hello",
+      "email": "hello@gmail.com",
+      "password": "12345",
+      "phno": "9456987123",
+      "id": 3
+    },
+    {
+      "username": "swathi",
+      "email": "swathi@gmail.com",
+      "password": "swathi",
+      "phno": "9876543212",
+      "id": 4
+    },
+    {
+      "username": "sandhya",
+      "email": "sandhya@gmail.com",
+      "password": "sandhya",
+      "phno": "9876543210",
+      "id": 5
+    },
+    {
+      "username": "demo",
+      "email": "demo@gmail.com",
+      "password": "demo",
+      "phno": "9876543210",
+      "id": 6
+    },
+    {
+      "username": "abcde",
+      "email": "abcde@gmail.com",
+      "password": "abcde",
+      "phno": "9876543210",
+      "id": 7
+    },
+    {
+      "name": "test1",
+      "email": "test1@gmail.com",
+      "password": "test1",
+      "address": "asd",
+      "mobilenumber": "7894561230",
+      "id": 8
+    }
+  ],
+  "registeradmin": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "admin1"
+    },
+    {
+      "adminid": "admin2",
+      "password": "admin2",
+      "id": 2
+    },
+    {
+      "adminid": "admin3",
+      "password": "admin3",
+      "id": 3
+    },
+    {
+      "adminid": "admin",
+      "password": "admin",
+      "id": 4
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "cuisinetype": "French",
+      "description": "Cheesy Burger",
+      "foodname": "Burger",
+      "offers": "8%",
+      "price": "300",
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "cuisinetype": "Chinese",
+      "description": "Potato Chips",
+      "foodname": "French Fries",
+      "offers": "4%",
+      "price": 99,
+      "status": "Available"
+    },
+    {
+      "id": 3,
+      "cuisinetype": "Indian",
+      "description": "Chicken",
+      "foodname": "Tandoori",
+      "offers": "5%",
+      "price": 499,
+      "status": "Available"
+    },
+    {
+      "id": 4,
+      "cuisinetype": "fds",
+      "description": "gc,jbhg",
+      "foodname": "mn vb",
+      "offers": "8%",
+      "price": 588,
+      "status": "Available"
+    }
+  ]
+}
