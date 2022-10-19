@@ -4,13 +4,17 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.foodbox.entity.LoginUser;
 import com.foodbox.entity.food;
 import com.foodbox.entity.signup;
 import com.foodbox.exception.ResourceNotFoundException;
@@ -20,6 +24,7 @@ import com.foodbox.service.foodService;
 import com.foodbox.service.signupService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200",allowedHeaders = "*")
 public class signupController {
 	@Autowired
 	signupRepo surepo;
@@ -32,6 +37,7 @@ public class signupController {
 	
 	@RequestMapping("/signup")
 	public Boolean create(@RequestBody signup su) {
+		System.out.println("in signup");
 		surepo.save(su);
 		if(sus.checkEntry(su.getEmail())) {
 			return true;
@@ -40,10 +46,12 @@ public class signupController {
 				return false;
 			}
 	}
-	@RequestMapping("/signin")
-	public Boolean userlogin(@RequestBody signup su) {
+	@RequestMapping(value ="/signin", method= RequestMethod.POST)
+	public Boolean userlogin(@RequestBody LoginUser lu) {
 		
-		if(sus.verifyUser(su.getEmail(), su.getPassword())){
+		//System.out.println("userlogin");
+		System.out.println(lu.getEmail());
+		if(sus.verifyUser(lu.getEmail(), lu.getPassword())){
 			return true;
 		}
 		else{
@@ -78,4 +86,25 @@ public class signupController {
 	public List<food> getNonVeg() {
 		return foodrepo.getNonVeg();
 	}
+	@GetMapping("/food/sort/price")
+    public List<food> sortByPrice(){
+        return foodrepo.sortbyPrice();
+    }
+
+ 
+
+    @GetMapping("/food/sort/price/dsc")
+    public List<food> sortByPriceDsc(){
+        return foodrepo.sortbyPriceHigh();
+    }
+    
+    @GetMapping("/food/sort/name")
+    public List<food> sortByName(){
+        return foodrepo.findAllOrderByFoodnameAsc();
+    }
+    
+    @GetMapping("/food/sort/name/dsc")
+    public List<food> sortByNameDsc(){
+        return foodrepo.findAllOrderByFoodnameDsc();
+    }
 }

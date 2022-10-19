@@ -31,4 +31,13 @@ public interface foodRepo extends JpaRepository<food, Integer>{
 	@Query("SELECT f FROM food f WHERE f.category LIKE 'nonveg' AND f.status LIKE 'yes'")
 	public List<food> getNonVeg();
 	
+	@Query("SELECT f FROM food f WHERE f.status LIKE 'yes' order by f.price")
+    public List<food> sortbyPrice();
+    @Query("SELECT f FROM food f WHERE f.status LIKE 'yes' order by f.price desc")
+    public List<food> sortbyPriceHigh();
+    @Query("SELECT f FROM food f WHERE f.status LIKE 'yes' order by f.foodname")
+    public List<food> findAllOrderByFoodnameAsc();
+    @Query("SELECT f FROM food f WHERE f.status LIKE 'yes' order by f.foodname desc")
+    public List<food> findAllOrderByFoodnameDsc();
+	
 }

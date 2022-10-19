@@ -16,7 +16,7 @@ import com.foodbox.repo.foodRepo;
 import com.foodbox.repo.signupRepo;
 import com.foodbox.service.cartService;
 
-@CrossOrigin(origins = "http://localhost:9095")
+@CrossOrigin(origins = "http://localhost:4200/userlogin",allowedHeaders = "*")
 @RestController
 
 public class CartController{
