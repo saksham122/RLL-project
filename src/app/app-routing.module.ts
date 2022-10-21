@@ -16,7 +16,7 @@ import { AdminregisterComponent } from './adminregister/adminregister.component'
 import { crudComponent } from './crud/crud.component';
 import { PaymentComponent } from './payment/payment.component';
 import { TransactionComponent } from './transaction/transaction.component';
-
+import { DefaultComponent} from './default/default.component'
 const routes: Routes = [
   {path:'search/:searchTerm', component:HomeComponent},
   {path:'tag/:tag', component:HomeComponent},
@@ -32,7 +32,7 @@ const routes: Routes = [
  
   { path :'adminregister', component: AdminregisterComponent},
   { path :'cart', component: CartPageComponent},
-  { path :'', component: HomeComponent},
+  { path :'', component: DefaultComponent},
   
 
 ];

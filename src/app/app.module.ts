@@ -24,7 +24,7 @@ import { ProductComponent } from './product/product.component';
 import { crudComponent } from './crud/crud.component';
 import { CartItem } from './shared/models/CartItem';
 import { PaymentComponent } from './payment/payment.component';
-import { TransactionComponent } from './transaction/transaction.component';
+import { DefaultComponent } from './default/default.component';
 
 
 
@@ -48,7 +48,7 @@ import { TransactionComponent } from './transaction/transaction.component';
     ProductComponent,
     crudComponent,
     PaymentComponent,
-    TransactionComponent,
+    DefaultComponent,
     
   ],
   imports: [
