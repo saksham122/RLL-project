@@ -22,7 +22,7 @@ export class ApiService {
   }
 
   updateFoodDetails(data: any, id: number) {
-    return this.http.put<any>('http://localhost:8082/updatefood/' + id, data).pipe(
+    return this.http.put<any>('http://localhost:8082/updatefood/{id}/' + id, data).pipe(
       map((res: any) => {
         return res;
       })
