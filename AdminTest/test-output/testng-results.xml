@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-21T10:38:53 IST" name="Default suite" finished-at="2022-10-21T10:39:49 IST" duration-ms="55994">
+    <groups>
+    </groups>
+    <test started-at="2022-10-21T10:38:53 IST" name="Default test" finished-at="2022-10-21T10:39:49 IST" duration-ms="55994">
+      <class name="com.rll.test.AdminTesting">
+        <test-method signature="Admin()[pri:0, instance:com.rll.test.AdminTesting@618425b5]" started-at="2022-10-21T10:38:53 IST" name="Admin" finished-at="2022-10-21T10:39:24 IST" duration-ms="30907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Admin -->
+      </class> <!-- com.rll.test.AdminTesting -->
+      <class name="com.rll.test.UserTesting">
+        <test-method signature="User()[pri:0, instance:com.rll.test.UserTesting@57cf54e1]" started-at="2022-10-21T10:39:24 IST" name="User" finished-at="2022-10-21T10:39:37 IST" duration-ms="13515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- User -->
+      </class> <!-- com.rll.test.UserTesting -->
+      <class name="com.rll.test.XAddCartTesting">
+        <test-method signature="XCart()[pri:0, instance:com.rll.test.XAddCartTesting@37d4349f]" started-at="2022-10-21T10:39:37 IST" name="XCart" finished-at="2022-10-21T10:39:49 IST" duration-ms="11519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XCart -->
+      </class> <!-- com.rll.test.XAddCartTesting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
