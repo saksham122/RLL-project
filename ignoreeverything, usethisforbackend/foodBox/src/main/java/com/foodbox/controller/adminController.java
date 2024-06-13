@@ -85,10 +85,7 @@ public class adminController {
 	public Boolean deleteFooditem(@PathVariable int id) {
 		return foodservice.deleteFood(id);
 	}
-//	@DeleteMapping("/deletecuisene/{id}")
-//	public Boolean deleteFooditem(@PathVariable String cuisine) {
-//		 foodService.deleteCuisine(cuisine);
-//	}
+
 	@GetMapping("/alltransactions")
 	public List<Payment> allpayment(@RequestBody Payment p) {
 		return paymentrepo.findAll();
